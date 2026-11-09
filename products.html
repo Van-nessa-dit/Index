@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Products | Green Harvest Agriculture</title>
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header>
+  <h1><i class="fas fa-leaf"></i> Green Harvest Agriculture</h1>
+  <p>Growing today for a Better Tomorrow</p>
+</header>
+
+<nav>
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-users"></i> About Us</a>
+  <a href="products.html" class="active"><i class="fas fa-seedling"></i> Products</a>
+  <a href="services.html"><i class="fas fa-tools"></i> Services</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<section class="page-title">
+  <h2>Our Products</h2>
+  <p>Fresh, sustainable, and farmer‑first produce & inputs.</p>
+</section>
+
+<section class="product-grid">
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1518843875459-f738682238a6?w=600&q=80" alt="Organic vegetables">
+    <h3><i class="fas fa-apple-alt"></i> Organic Produce</h3>
+    <p>Fresh, chemical‑free fruits and vegetables delivered from our partner farms.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?w=600&q=80" alt="Grains">
+    <h3><i class="fas fa-wheat-awn"></i> Premium Grains</h3>
+    <p>High‑quality maize, wheat, and rice grown with regenerative methods.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80" alt="Farm inputs">
+    <h3><i class="fas fa-box"></i> Farm Inputs</h3>
+    <p>Seeds, organic fertilizers, and eco‑friendly tools for sustainable growth.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?w=600&q=80" alt="Fresh fruit basket">
+    <h3><i class="fas fa-basket-shopping"></i> Seasonal Fruit Box</h3>
+    <p>A rotating selection of the season's best, delivered to your door.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=80" alt="Honey jars">
+    <h3><i class="fas fa-jar"></i> Raw Honey</h3>
+    <p>Pure, unfiltered honey harvested from our partner apiaries.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+  <div class="product-card">
+    <img src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80" alt="Herbs">
+    <h3><i class="fas fa-leaf"></i> Fresh Herbs</h3>
+    <p>Aromatic herbs grown without synthetic pesticides.</p>
+    <a href="contact.html" class="card-link"><i class="fas fa-paper-plane"></i> Enquire</a>
+  </div>
+</section>
+
+<div class="back-link">
+  <a href="services.html"><i class="fas fa-tools"></i> Explore Our Services</a>
+</div>
+
+<footer>
+  <p><i class="fas fa-leaf"></i> © 2026 Green Harvest Agriculture</p>
+  <p>Growing Food, Supporting Farmers.</p>
+</footer>
+
+<script>
+  const cards = document.querySelectorAll('.product-card');
+  cards.forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(30px)';
+    card.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s`;
+  });
+
+  window.addEventListener('load', () => {
+    cards.forEach(card => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+
+</body>
+</html>

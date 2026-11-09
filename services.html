@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Services | Green Harvest Agriculture</title>
+<link rel="stylesheet" href="style.css">
+
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<header>
+  <h1><i class="fas fa-leaf"></i> Green Harvest Agriculture</h1>
+  <p>Growing today for a Better Tomorrow</p>
+</header>
+
+<nav aria-label="Main navigation">
+  <a href="index.html"><i class="fas fa-home"></i> Home</a>
+  <a href="about.html"><i class="fas fa-users"></i> About Us</a>
+  <a href="products.html"><i class="fas fa-seedling"></i> Products</a>
+  <a href="services.html" class="active" aria-current="page"><i class="fas fa-tools"></i> Services</a>
+  <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<main>
+  <section class="page-title">
+    <h2>Our Services</h2>
+    <p>Practical, hands‑on support for every stage of your farming journey.</p>
+  </section>
+
+  <section class="service-gallery">
+    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=1200&q=80" alt="Modern farming fields at sunrise">
+    <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?w=1200&q=80" alt="Farmer training session in a field">
+  </section>
+
+  <section class="service-cards">
+    <div class="card">
+      <i class="fas fa-seedling" aria-hidden="true"></i>
+      <h3>Crop Farming</h3>
+      <p>Planting, weeding and harvesting crops with modern equipment and sustainable methods.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-user-graduate" aria-hidden="true"></i>
+      <h3>Farmer Training</h3>
+      <p>Teaching modern farming techniques, pest control, and soil health management.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-hand-holding-usd" aria-hidden="true"></i>
+      <h3>Farm Management</h3>
+      <p>Helping farmers manage their resources, finances, and operations more efficiently.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-truck-fast" aria-hidden="true"></i>
+      <h3>Distribution &amp; Logistics</h3>
+      <p>Connecting farms to markets with reliable, temperature‑controlled delivery.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-water" aria-hidden="true"></i>
+      <h3>Irrigation Advisory</h3>
+      <p>Design and installation of water‑efficient irrigation systems.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-flask" aria-hidden="true"></i>
+      <h3>Soil Testing</h3>
+      <p>Laboratory analysis to help you make data‑driven soil fertility decisions.</p>
+      <a href="contact.html" class="card-link">Request Service</a>
+    </div>
+  </section>
+
+  <div class="back-link">
+    <a href="about.html"><i class="fas fa-users"></i> Learn About Us</a>
+  </div>
+</main>
+
+<footer>
+  <p><i class="fas fa-leaf"></i> © 2026 Green Harvest Agriculture</p>
+  <p>Growing Food, Supporting Farmers.</p>
+</footer>
+
+<script>
+  (function () {
+    var cards = document.querySelectorAll('.service-cards .card');
+    if (!('IntersectionObserver' in window)) {
+      cards.forEach(function (c) { c.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    cards.forEach(function (c) { observer.observe(c); });
+  })();
+</script>
+
+</body>
+</html>
